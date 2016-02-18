@@ -1,46 +1,56 @@
 $(document).ready(
-    function() {
-        getSubscription();
+    function () {
+        getSubscriptions();
     }
 );
 
-function getSubscription(subscriprionId) {
+function getSubscriptions () {
 
-    if(subscriprionId === undefined){
+    $.get('/api/subscriptions', function (result, status) {
 
-        $.get('/api/subscriptions', function(data, status) {
+        if (status === 'success') {
 
-            var validProperties = ['subscription_id', 'title', 'user', 'downloads_left', 'price'];
+            var subscriptions = result.data;
 
-            if (status === 'success') {
-                var subscriptions = data.data;
+            var $subscriptionTable = $('#subscriptionTable');
 
-                var $subscriptionTable = $('#subscriptionTable');
+            buildRows(subscriptions, $subscriptionTable);
 
-                for (var i = 0; i < subscriptions.length; i++) {
+            $subscriptionTable.DataTable();
+        }
+    });
+}
 
-                    var row = $('<tr></tr>');
-                    var subscription = subscriptions[i];
+function getViewLink (subscriptionId) {
 
-                    for (var prop in validProperties) {
-                        var cell = $('<td></td>').text(subscription[validProperties[prop]]);
-                        row.append(cell);
-                    }
-                    var view = $('<a></a>')
-                        .attr('href', 'subscriptions/' + subscription['subscription_id'])
-                        .text('View');
+    return $('<a></a>')
+        .attr('href', 'subscriptions/' + subscriptionId)
+        .text('View');
+}
 
-                    var cell = $('<td></td>').append(view);
-                    row.append(cell);
+function buildRows (subscriptions, $subscriptionTable) {
 
-                    $subscriptionTable.append(row);
-                }
+    var validProperties = [
+        'subscription_id',
+        'title',
+        'user',
+        'downloads_left',
+        'price'
+    ];
 
-                $subscriptionTable.DataTable();
-            } else {
-                alert(data.error.errors);
-            }
-        });
+    for (var i = 0; i < subscriptions.length; i++) {
+
+        var row = $('<tr></tr>');
+
+        var subscription = subscriptions[i];
+
+        for (var prop in validProperties) {
+
+            row.append($('<td></td>').text(subscription[validProperties[prop]]));
+        }
+
+        row.append($('<td></td>').append(getViewLink(subscription['subscription_id'])));
+
+        $subscriptionTable.append(row);
     }
-
 }
