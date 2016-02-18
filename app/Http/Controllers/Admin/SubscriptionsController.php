@@ -19,7 +19,7 @@ class SubscriptionsController extends Controller
     {
         $subscriptions = Subscription::all();
 
-        return view('admin.subscriptions.index', ['subscriptions' => $subscriptions]);
+        return view('admin.subscriptions.index', ['subscriptions' => $subscriptions->all()]);
     }
 
     /**
@@ -53,7 +53,7 @@ class SubscriptionsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.subscriptions.show', ['subscription_id' => $id]);
     }
 
     /**
