@@ -1,0 +1,14 @@
+[16-Feb-2016 08:12:05 UTC] PHP Fatal error:  Class 'App\Http\Controllers\User' not found in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\UsersController.php on line 16
+[16-Feb-2016 08:12:39 UTC] PHP Fatal error:  Class 'App\Http\Controllers\User' not found in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\UsersController.php on line 16
+[16-Feb-2016 08:13:17 UTC] PHP Fatal error:  Class 'App\Http\Controllers\User' not found in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\UsersController.php on line 16
+[16-Feb-2016 09:24:29 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\UsersController.php on line 87
+[16-Feb-2016 18:53:09 UTC] PHP Parse error:  syntax error, unexpected '$validator' (T_VARIABLE) in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\UsersController.php on line 101
+[16-Feb-2016 18:56:16 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\UsersController::create() in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\UsersController.php on line 155
+[17-Feb-2016 18:45:40 UTC] PHP Fatal error:  Class 'User' not found in C:\nginx-1.6.2\html\nirphCC\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php on line 1011
+[17-Feb-2016 18:46:26 UTC] PHP Fatal error:  Class 'User' not found in C:\nginx-1.6.2\html\nirphCC\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php on line 1011
+[17-Feb-2016 19:14:39 UTC] PHP Fatal error:  Declaration of App\Transformers\SubscriptionsTransformer::transform() must be compatible with App\Transformers\Transformer::transform(Illuminate\Database\Eloquent\Model $item) in C:\nginx-1.6.2\html\nirphCC\app\Transformers\SubscriptionsTransformer.php on line 18
+[17-Feb-2016 19:26:07 UTC] PHP Fatal error:  Declaration of App\Transformers\UsersTransformer::transform() must be compatible with App\Transformers\Transformer::transform(Illuminate\Database\Eloquent\Model $item) in C:\nginx-1.6.2\html\nirphCC\app\Transformers\UsersTransformer.php on line 17
+[17-Feb-2016 19:26:11 UTC] PHP Fatal error:  Declaration of App\Transformers\UsersTransformer::transform() must be compatible with App\Transformers\Transformer::transform(Illuminate\Database\Eloquent\Model $item) in C:\nginx-1.6.2\html\nirphCC\app\Transformers\UsersTransformer.php on line 17
+[17-Feb-2016 19:26:26 UTC] PHP Fatal error:  Declaration of App\Transformers\UsersTransformer::transform() must be compatible with App\Transformers\Transformer::transform(Illuminate\Database\Eloquent\Model $item) in C:\nginx-1.6.2\html\nirphCC\app\Transformers\UsersTransformer.php on line 17
+[17-Feb-2016 19:56:39 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Subscription' not found in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\ProductsController.php on line 17
+[17-Feb-2016 20:48:25 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Api\Controller' not found in C:\nginx-1.6.2\html\nirphCC\app\Http\Controllers\Api\ApiController.php on line 15
