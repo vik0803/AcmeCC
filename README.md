@@ -68,5 +68,7 @@ From your project folder run the following command:
 ```
 php artisan serve
 ```
-This should create dummy data to work with.
-
+This is to start the server, which should be available on: 
+```
+http://localhost:8000/
+```
