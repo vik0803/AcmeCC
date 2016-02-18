@@ -19,7 +19,7 @@ Route::post('/admin/users', 'Admin\UsersController@store');
 Route::get('/admin/users/{id}/edit/', 'AdminController@edit');
 Route::post('/admin/users/{id}', 'AdminController@update');
 
-Route::get('/admin/subscriptions', 'AdminController@index');
+Route::get('/admin/subscriptions', 'Admin\SubscriptionsController@index');
 Route::get('/admin/subscriptions/view/{id}', 'AdminController@index');
 
 
