@@ -10,10 +10,12 @@ function getSubscription(subscriprionId) {
 
         $.get('/api/subscriptions', function(data, status) {
 
-            var validProperties = Array('subscription_id', 'title', 'user', 'downloads_left', 'price');
+            var validProperties = ['subscription_id', 'title', 'user', 'downloads_left', 'price'];
 
             if (status === 'success') {
                 var subscriptions = data.data;
+
+                var $subscriptionTable = $('#subscriptionTable');
 
                 for (var i = 0; i < subscriptions.length; i++) {
 
@@ -31,8 +33,10 @@ function getSubscription(subscriprionId) {
                     var cell = $('<td></td>').append(view);
                     row.append(cell);
 
-                    $('#subscriptionTable').append(row);
+                    $subscriptionTable.append(row);
                 }
+
+                $subscriptionTable.DataTable();
             } else {
                 alert(data.error.errors);
             }
