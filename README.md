@@ -50,9 +50,23 @@ From your terminal. Run the following command:
 composer install
 ```
  
-### Step 4 - Migrate and seed the database
+### Step 4 - Generate unique application key
+Run:
+```
+php artisan key:generate 
+``` 
+
+### Step 5 - Migrate and seed the database
 From your project folder run the following command:
 ```
 php artisan migrate --seed
 ```
 This should create dummy data to work with.
+
+### Step 6 - Start the server
+From your project folder run the following command:
+```
+php artisan seve
+```
+This should create dummy data to work with.
+
