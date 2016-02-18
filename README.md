@@ -1,24 +1,24 @@
 # AcmeCC
 Simple Subscription API implementation and front-end
 
-# Introduction
+## Introduction
 This application represents the API and also the front-end of the application.
 API resource controllers are in a specific API folder and the api is encapsulated
 in an ``/api`` route group, see ``/app/Http/routes.php``.
 
 The front-end is represented the pages that make up the site. 
 
-# Installation
+## Installation
 
-## Step 1 - Get the project.
+### Step 1 - Get the project.
 Here you have 2 options:
-### 1. Download 
+#### 1. Download 
   - Download this repository from Github
 
-### 2. Clone
+#### 2. Clone
   - ``git clone https://github.com/jbmadking/AcmeCC.git``
   
-## Step 2 - Configure the application.
+### Step 2 - Configure the application.
 Create a ``.env`` file and set your configurations. 
 Below is a sample:
 ```
@@ -43,8 +43,16 @@ MAIL_PORT=2525
 MAIL_USERNAME=null
 MAIL_PASSWORD=null
 ```
+
+### Step 3 - Install project dependencies
+From your terminal. Run the following command:
+```
+composer install
+```
  
-## Step 3 - Migrate and seed the database
+### Step 4 - Migrate and seed the database
 From your project folder run the following command:
-``php artisan migrate --seed``
-This should create dummy data to work with. 
+```
+php artisan migrate --seed
+```
+This should create dummy data to work with.
