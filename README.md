@@ -66,7 +66,7 @@ This should create dummy data to work with.
 ### Step 6 - Start the server
 From your project folder run the following command:
 ```
-php artisan seve
+php artisan serve
 ```
 This should create dummy data to work with.
 
