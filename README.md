@@ -2,7 +2,7 @@
 Simple Subscription API implementation and front-end
 
 ## Introduction
-This is a laravel application that represents the API and also the front-end of the application. The API represented 
+This is a laravel application that represents the API and also the front-end of the application. The API is represented 
 as set of resource controllers located in the 
 [app/Http/Contollers/Api](https://github.com/jbmadking/AcmeCC/tree/master/app/Http/Controllers/Api) folder. It api is 
 encapsulated under this url: [http://localhost/api/](http://localhost/api/) in the ``/api`` route group, see 
