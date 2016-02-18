@@ -2,15 +2,17 @@
 Simple Subscription API implementation and front-end
 
 ## Introduction
-This application represents the API and also the front-end of the application.
-API resource controllers are in a specific API folder and the api is encapsulated
-in an ``/api`` route group, see ``/app/Http/routes.php``.
+This is a laravel application that represents the API and also the front-end of the application. The API represented 
+as set of resource controllers located in the 
+[app/Http/Contollers/Api](https://github.com/jbmadking/AcmeCC/tree/master/app/Http/Controllers/Api) folder. It api is 
+encapsulated under this url: [http://localhost/api/](http://localhost/api/) in the ``/api`` route group, see 
+[/app/Http/routes.php](https://github.com/jbmadking/AcmeCC/blob/master/app/Http/routes.php).
 
-The front-end is represented the pages that make up the site. 
+The front-end is represented the pages that make up the site. These would be your ordinary controllers.
 
 ## Installation
 
-### Step 1 - Get the project.
+#### Step 1 - Get the project.
 Here you have 2 options:
 #### 1. Download 
   - Download this repository from Github
