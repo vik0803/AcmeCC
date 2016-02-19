@@ -5,11 +5,23 @@ $(document).ready(function () {
             e.preventDefault();
 
             $.post("api/users", $(this).serialize()
-            ).done(function (result) {
-                    sweetAlert('Sweetaah', 'You are now registered! <br />' + result.data.message, 'success');
+            ).done(function () {
+                    swal({
+                        title: 'Sweetaah!!',
+                        text : 'You are now registered!',
+                        type : 'success'
+                    });
                 }
-            ).error(function () {
-                    sweetAlert('Oops...', 'Something went wrong!', 'error');
+            ).error(function (result) {
+
+                    var json = result.responseJSON;
+                    var errorHtml = buildErrorList(json.error.errors);
+
+                    swal({
+                        title: 'Oops...',
+                        html : errorHtml,
+                        type : 'error'
+                    });
                 }
             );
         });
@@ -47,4 +59,17 @@ function buildProductList (products, productsList) {
     }
 
     productsList.append(selectElement);
+}
+
+function buildErrorList (errors) {
+
+    var errorHtml = '<ul class="class="list-group"">';
+
+    errors.forEach(function (item) {
+        errorHtml += '<li class="list-group-item">' + item + '</li>';
+    });
+
+    errorHtml += '</ul>';
+
+    return errorHtml;
 }
