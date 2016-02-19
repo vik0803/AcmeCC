@@ -7,23 +7,30 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" id="registerForm">
                         <div class="form-group">
                             <label class="col-md-4 control-label">User Name</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="username" value="{{ old('username') }}">
+                                <input type="text" class="form-control" name="username">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-4 control-label">E-Mail Address</label>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" name="email">
                            </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-4 control-label">Date of Birth</label>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="text" class="form-control" name="date_of_birth" id="date_of_birth">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Subscription</label>
+                            <div class="col-md-6" id="productsList">
+
                             </div>
                         </div>
 
@@ -43,7 +50,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="button" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i>Register
                                 </button>
                             </div>
@@ -54,5 +61,16 @@
         </div>
     </div>
 </div>
-<script src="js/datepicker/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/register.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $('#date_of_birth').datepicker({
+            format: "mm/dd/yy",
+            autoclose: true,
+            todayHighlight: true
+        });
+    });
+</script>
 @endsection

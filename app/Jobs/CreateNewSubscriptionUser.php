@@ -29,7 +29,7 @@ class CreateNewSubscriptionUser extends Job
           [
             'username' => $this->data['username'],
             'email' => $this->data['email'],
-            'date_of_birth' => $this->data['dob'],
+            'date_of_birth' => $this->data['date_of_birth'],
             'password' => bcrypt($this->data['password']),
           ]
         );

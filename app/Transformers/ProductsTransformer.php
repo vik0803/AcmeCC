@@ -29,7 +29,7 @@ class ProductsTransformer extends Transformer
           'product_id' => $product->id,
           'title' => $product->name,
           'price' => $product->price,
-          'max_downloads' => $product->maximum_downloads,
+          'maximum_downloads' => $product->maximum_downloads,
         ];
     }
 }

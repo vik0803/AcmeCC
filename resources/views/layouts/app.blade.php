@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert2.css">
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">
@@ -49,6 +50,7 @@
     </nav>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
     <script src="/js/app.js"></script>
 
     @yield('content')
